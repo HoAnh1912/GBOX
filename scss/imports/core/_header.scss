@@ -1,0 +1,159 @@
+// css header
+header {
+  --headerHeight: 140px;
+  height: var(--headerHeight);
+  .top {
+    height: 50%;
+    background-color: #525355;
+    width: 100%;
+    .container {
+      position: relative;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      .btnmenu {
+        --heightMenu: 20px;
+        position: absolute;
+        left: 0;
+        height: var(--heightMenu);
+        width: 30px;
+        cursor: pointer;
+        display: none;
+        span {
+          height: 2px;
+          background: white;
+          position: relative;
+          display: block;
+          z-index: 300;
+          top: 50%;
+        }
+        &::before,
+        &::after {
+          content: "";
+          height: 2px;
+          background: white;
+          display: block;
+        }
+        &::after {
+          background: white;
+          margin-top: var(--heightMenu);
+        }
+        &.click {
+          &:before {
+            @include transform(rotate(45deg) translate(8px, 8px));
+            @include transition($t);
+          }
+          span {
+            opacity: 0;
+            @include transition($t);
+          }
+          &:after {
+            @include transform(rotate(-45deg) translate(8px, -8px));
+            @include transition($t);
+          }
+        }
+        @include sm {
+          display: block;
+          z-index: 99;
+        }
+        @include xs {
+          display: block;
+          margin-left: 20px;
+        }
+      }
+      .logo {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      .facebook {
+        height: 30px;
+        width: 30px;
+      }
+      .nav {
+        display: none;
+        &.active {
+          left: 0;
+          opacity: 1;
+          pointer-events: auto;
+          @include transition(0.3s);
+        }
+        @include sm {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          background-color: $yellow-cl;
+          z-index: 9;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          left: -900px;
+          @include transition(0.3s);
+          ul {
+            line-height: 40px;
+            text-align: center;
+            a {
+              text-decoration: none;
+              font-size: 15px;
+              font-family: "pb";
+              color: black;
+              &:hover {
+                color: #525355;
+                transition: $t;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    height: 50%;
+    .menu {
+      --padTop: 40px;
+      --padBot: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      border-bottom: 1px solid $text-title;
+      position: relative;
+      &__item {
+        height: 100%;
+        a {
+          text-decoration: none;
+          font-size: 12px;
+          font-family: pb;
+          color: $text-title;
+          height: 100%;
+          padding-top: var(--padTop);
+          padding-bottom: var(--padBot);
+          display: block;
+        }
+      }
+      .middle {
+        display: flex;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+          margin: 0 30px;
+        }
+      }
+      @include sm {
+        display: none;
+      }
+      @include xs {
+        display: none;
+      }
+    }
+  }
+}

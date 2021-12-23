@@ -1,0 +1,177 @@
+// CSS HOMEPAGE
+.mainwrapper-homepage {
+  .welcom {
+    text-align: center;
+    color: $text-title;
+    &__title {
+      font-family: pr;
+      font-size: 14px;
+      letter-spacing: 3px;
+      line-height: 20px;
+    }
+    &__titlemain {
+      margin: 30px 0 30px 0;
+      font-family: pb;
+      display: inline-table;
+      background: #ffde00;
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: #525355;
+    }
+    &__des {
+      span {
+        font-weight: bold;
+      }
+      font-size: 12px;
+      font-family: pr;
+      padding: 0 68px 0 68px;
+      line-height: 20px;
+      @include sm {
+        display: none;
+      }
+    }
+  }
+  .product {
+    padding: 0 !important;
+    &:before {
+      content: "";
+      width: 320px;
+      height: 1px;
+      display: block;
+      background: $text-title;
+      margin: auto auto;
+      @include sm {
+        display: none;
+      }
+    }
+    &__tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      li {
+        font-size: 12px;
+        font-family: pb;
+        cursor: pointer;
+        height: 100%;
+        a {
+          display: block;
+          text-decoration: none;
+          margin: 0 30px;
+          padding: 50px 0 20px 0;
+          color: #898989;
+          &:hover {
+            color: $text-title;
+            transition: $t;
+          }
+        }
+      }
+      @include sm {
+        display: none;
+      }
+    }
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 60px;
+      .welcom__product {
+        width: 100%;
+        .img {
+          height: 0px;
+          position: relative;
+          cursor: pointer;
+          padding-bottom: 70%;
+          overflow: hidden;
+          a {
+            height: 0;
+            overflow: hidden;
+            //position: relative;
+            cursor: pointer;
+            padding-bottom: 70%;
+            max-width: 100%;
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              min-width: 100%;
+              min-height: 100%;
+              object-fit: cover;
+              transform: translate(-50%, -50%) scale(1);
+              transition: all 0.4s ease 0s;
+              &:hover {
+                transform: translate(-50%, -50%) scale(1.08);
+                transition: 0.4s;
+              }
+            }
+          }
+        }
+        .text {
+          // font-family: pb;
+          padding-top: 40px;
+          .title {
+            text-align: center;
+            a {
+              font-family: pb;
+              text-decoration: none;
+              font-size: 15px;
+              color: $text-title;
+              text-align: center;
+            }
+            &:after {
+              content: "";
+              width: 20px;
+              height: 3px;
+              background: $yellow-cl;
+              display: block;
+              margin: 10px auto;
+            }
+          }
+
+          .des {
+            font-family: pb;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            span {
+              font-style: italic;
+            }
+          }
+        }
+      }
+      @include xs {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 70px auto;
+      padding: 70px auto;
+      position: relative;      
+      a {
+        text-decoration: none;
+        font-family: pb;
+        color: $text-title;
+        padding: 70px 0;
+        text-align: center;
+        line-height: 25px;
+        .arrow-down {
+          height: 10px;
+          width: 18px;
+        }
+        // &::after {
+        //   content: "";
+        //   width: 320px;
+        //   height: 1px;
+        //   display: block;
+        //   background: $text-title;
+        //   margin: auto auto;
+        // }
+      }
+    }
+  }
+}

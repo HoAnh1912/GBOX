@@ -1,0 +1,71 @@
+.project-controller {
+  .controller {
+    &__detail {
+      display: flex;
+      font-family: pr;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .right {
+        display: flex;
+        span {
+          font-size: 12px;
+        }
+        img {
+          height: 12px;
+          margin-left: 5px;
+        }
+        .full-screen {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
+  .project-detail {
+    display: flex;
+    font-size: 14px;
+    font-family: pr;
+    img {
+      display: block;
+    }
+    &__info {
+      margin-top: 40px;
+      display: flex;
+      h2 {
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 12px;
+        margin-top: 25px;
+        line-height: 25px;
+      }
+      span {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.mainwrapper-test {
+  .test {
+    &__title {
+      font-size: 25px;
+      font-family: pb;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0 30px 0;
+      letter-spacing: 2px;
+      color: red;
+    }
+    &__product {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

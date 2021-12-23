@@ -1,0 +1,129 @@
+// // css footer
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #231f20;
+  .container {
+    .footer__top {
+      display: grid;
+      font-family: "pr";
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 20px;
+      grid-template-columns: 1fr 0.5fr 0.5fr;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      margin-top: 30px;
+      &.--left {
+        display: block;
+        .email {
+          padding-bottom: 50px;
+          line-height: 25px;
+        }
+        .tel {
+          display: flex;
+          :first-child {
+            margin-right: 35px;
+            @include sm {
+              margin-right: 0px;
+            }
+          }
+          @include sm {
+            display: block;
+          }
+        }
+      }
+      &.--right {
+        display: block;
+        line-height: 30px;
+        @include sm {
+          display: none;
+        }
+      }
+      @include sm {
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+  .footer__bottom {
+    background-color: $yellow-cl;
+    .container {
+      .--wrap {
+        display: grid;
+        //justify-content: space-between;
+        font-family: "pr";
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 30px;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+        letter-spacing: 1px;
+        .address {
+          text-transform: uppercase;
+        }
+        @include sm {
+          .formone,
+          .formtwo {
+            display: none;
+          }
+        }
+        .text-input {
+          margin-bottom: 30px;
+          label {
+            display: block;
+          }
+          input {
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid #000;
+            resize: none;
+            height: 30px;
+            width: 220px;
+            font-family: pr;
+            padding-top: 10px;
+            padding-left: 5px;
+          }
+        }
+        .submit {
+          display: flex;
+          justify-content: flex-end;
+          button {
+            border: none;
+            font-size: 10px;
+            font-family: "pb";
+            background: #231f20;
+            color: white;
+            height: 20px;
+            width: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+          }
+        }
+        @include sm {
+          display: block;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+    .btntop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 70px;
+      .info__arrow {
+        padding-bottom: 20px;
+        cursor: pointer;
+        img {
+          height: 25px;
+        }
+      }
+      p {
+        font-size: 10px;
+        font-family: pr;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

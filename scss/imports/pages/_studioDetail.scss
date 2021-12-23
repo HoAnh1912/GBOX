@@ -1,0 +1,28 @@
+.controller {
+  &__studio {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+    .backToAll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 12px;
+        font-family: "pr";
+        margin-right: 30px;
+      }
+      img {
+        height: auto;
+        width: 10px;
+      }
+    }
+  }
+}
+.studio-detail {
+  &__img {
+    img {
+      width: 100vw;
+    }
+  }
+}
