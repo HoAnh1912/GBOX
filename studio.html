@@ -1,276 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gbox</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>GBOX</title>
+    <!-- <link rel="icon" href="favicon.ico" /> -->
     <meta name="title" content="" />
     <meta name="description" content="" />
+
     <!-- meta facebook -->
     <meta property="og:locale" content="vi" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:title" content="" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
+    
+    <link rel="stylesheet" href="/dest/stylelibs.min.css" />
+    <link rel="stylesheet" href="/fonts/font.css" />
+    <link rel="stylesheet" href="/dest/style.min.css" />
 
-    <link rel="stylesheet" href="dest/style.min.css" />
-    <link rel="stylesheet" href="dest/font.css" />
+
   </head>
-  <body>
-    <header>
-      <div class="top">       
+
+  <!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
+
+  <body class="studiopage">
+    <!-- HEADER -->
+   <header class="header">
+      <div class="header__top">
         <div class="container">
-          <div class="btnmenu">
+          <div class="humbeger">
             <span></span>
           </div>
-          <nav class="nav">
-            <ul>
-              <li>
-                <a href="#about">ABOUT</a>
-              </li>
-              <li>
-                <a href="#studio">STUDIO</a>
-              </li>
-              <li>
-                <a href="#rental">RENTAL</a>
-              </li>
-              <li>
-                <a href="#cafe">CAFE</a>
-              </li>
-              <li>
-                <a href="#work">WORK</a>
-              </li>
-              <li>
-                <a href="#contact">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-          <a class="logo" href="#">
-            <img src="img/logo.png" alt="" />
-          </a>
-          <a class="facebook" href="#">
-            <img src="img/facebook.svg" alt=""
-          /></a>
+          <div class="logo">
+            <a href="/index.html">
+              <img src="img/logo.png" alt="logo" />
+            </a>
+          </div>
+          <img src="/img/icon facebook.png" alt="" />
         </div>
       </div>
-      <div class="container">
-        <ul class="menu">
-          <li class="menu__item">
-            <a href="#">ABOUT</a>
-          </li>
-          <ul class="menu__item middle">
-            <li class="menu__item">
-              <a href="#">STUDIO</a>
-            </li>
-            <li class="menu__item">
-              <a href="#">RENTAL</a>
-            </li>
-            <li class="menu__item">
-              <a href="#">CAFE</a>
-            </li>
-            <li class="menu__item">
-              <a href="#">WORK</a>
-            </li>
-          </ul>
-          <li class="menu__item">
-            <a href="#">CONTACT</a>
-          </li>
-        </ul>
+      <div class="header__wrap">
+        <div class="container">
+          <div class="header__bot">
+            <a href="/about.html">ABOUT</a>
+            <ul class="menu">
+              <li><a href="/studio.html">STUDIO</a></li>
+              <li><a href="/rental.html">RENTAL</a></li>
+              <li><a href="/cafe.html">CAFE</a></li>
+              <li><a href="/work.html">WORK</a></li>
+            </ul>
+            <a href="/contact.html">CONTACT</a>
+          </div>
+        </div>
       </div>
     </header>
-    <main class="mainwrapper-studio">
+
+    <nav class="nav">
+      <ul>
+        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/studio.html">STUDIO</a></li>
+        <li><a href="/rental.html">RENTAL</a></li>
+        <li><a href="/cafe.html">CAFE</a></li>
+        <li><a href="/work.html">WORK</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Example HTML -->
       <section class="studio">
         <div class="container">
+  
           <div class="studio__wrap">
-            <div class="studio-item">
-                <div class="img" href="#">
-                  <img src="./img/studio-1.jpg" alt="">
-                </div>
-                <div class="text">
-                    <div class="text__right">
-                        <p>studio <br/> <span>01</span></p>
+            <a href="/studiodetail.html">
+                <div class="image"><img src="/img/studio1.jpg" alt="" /></div>
+                <div class="studio__wrap-text">
+                  <div class="number">
+                    <div class="number__wrap">
+                        <p> studio</p>
+                    <span>01</span>
                     </div>
-                    <div class="text__left">
-                        <div class="dimensions">
-                            <p class="title">dimensions</p>
-                            <div class="size">
-                                <p>87ft × 92ft × 31ft </p>
-                                <p>(26.52m × 28.04m × 9.45m)</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail">
-                            <p>detail</p>
-                            <a href="/studio-detail.html">
-                              <svg  class="arrow-detail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"  fill="#4f4e4e"/></svg>                               
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>          
-            <div class="studio-item">
-                <div class="img" href="#">
-                  <img src="./img/studio-2.jpg" alt="">
-                </div>
-                <div class="text">
-                    <div class="text__right">
-                        <p>studio <br/> <span>02</span></p>
-                    </div>
-                    <div class="text__left">
-                        <div class="dimensions">
-                            <p class="title">dimensions</p>
-                            <div class="size">
-                                <p>87ft × 92ft × 31ft </p>
-                                <p>(26.52m × 28.04m × 9.45m)</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail">
-                            <p>detail</p>
-                            <a href="#">
-                              <svg  class="arrow-detail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"  fill="#4f4e4e"/></svg>                               
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>          
-            <div class="studio-item">
-                <div class="img" href="#">
-                  <img src="./img/studio-3.jpg" alt="">
-                </div>
-                <div class="text">
-                    <div class="text__right">
-                        <p>studio <br/> <span>03</span></p>
-                    </div>
-                    <div class="text__left">
-                        <div class="dimensions">
-                            <p class="title">dimensions</p>
-                            <div class="size">
-                                <p>87ft × 92ft × 31ft </p>
-                                <p>(26.52m × 28.04m × 9.45m)</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail">
-                            <p>detail</p>
-                            <a href="#">
-                              <svg  class="arrow-detail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"  fill="#4f4e4e"/></svg>                               
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>          
-            <div class="studio-item">
-                <div class="img" href="#">
-                  <img src="./img/studio-4.jpg" alt="">
-                </div>
-                <div class="text">
-                    <div class="text__right">
-                        <p>studio <br/> <span>04</span></p>
-                    </div>
-                    <div class="text__left">
-                        <div class="dimensions">
-                            <p class="title">dimensions</p>
-                            <div class="size">
-                                <p>87ft × 92ft × 31ft </p>
-                                <p>(26.52m × 28.04m × 9.45m)</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail">
-                            <p>detail</p>
-                            <a href="#">
-                              <svg  class="arrow-detail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"  fill="#4f4e4e"/></svg>                               
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>   
-                            
-        </div>
-      </section>    
-      <footer>
-        <div class="container">
-          <div class="footer__top">
-            <div class="footer__top --left">
-              <div class="email">
-                <p>Email</p>
-                <p>info@goldenboxstudios.com</p>
-              </div>
-              <div class="tel">
-                <p>Tel</p>
-                <p>+84 979 872 809</p>
-              </div>
-            </div>
-            <div class="footer__top --right">
-              <p>
-                if you have any questions, 
-              <p>comments or
-              </p></p>
-              <p> suggestions, feel free to
-                email</p>
-                <p> us or</p>
-            </div>
-          </div>         
-        </div>
-         <div class="footer__bottom">
-           <div class="container">  
-            <div class="footer__bottom --wrap">          
-              <div class="address">
-                <p>Address</p>
-                <p>04 bau cat district tan binh</p>
-                <p>Ho chi minh city.</p>            
-              </div>               
-              <div class="formone">
-                  <div class="text-input">
-                    <label for="yourname">Your Name</label>
-                    <input
-                      type="text"
-                      name="yourname"
-                      id="yourname"
-                      placeholder=""
-                    />
+                    </p>
                   </div>
-                  <div class="text-input">
-                    <label for="phone">Phone</label>
-                    <input type="text" name="phone" id="phone" placeholder="" />
+                  
+                  <div class="dimension">
+                      <div class="ratio">
+                        <p class="ratio__title">dimensions</p>
+                        <p>87ft × 92ft × 31ft<br/> (26.52m × 28.04m × 9.45m)</p>
+                      </div>
+
+                      <div class="detail">
+      
+                        <p>detail</p>
+                        <!-- <div class="mobile">  <img src="/img/pre.svg" alt=""></div>   -->
+
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                          <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                   </div>
+                    
                   </div>
-                  <div class="text-input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="" />
-                  </div>
-              </div>
-              <div class="formtwo">
-                  <div class="text-input">
-                    <label for="subject"> Subject </label>
-                    <input type="text" name="subject" id="subject" placeholder="" />
-                  </div>
-                  <div class="text-input">
-                    <label for="message"> Message </label>
-                    <input type="text" name="message" id="message" placeholder="" />
-                  </div>
-                  <div class="submit">
-                    <button type="submit">Send</button>
-                  </div>
-              </div>               
-            </div> 
-            <div class="btntop">
-            <a href="#" class="info__arrow" >
-              <img src="img/up-arrow.svg" alt="" />
+                </div>
             </a>
-            <p>© 2018 GBOX STUDIO. All rights reserved</p>
+          
           </div>
+          <div class="studio__wrap">
+            <a href="">
+                <div class="image"><img src="/img/studio2.jpg" alt="" /></div>
+                <div class="studio__wrap-text">
+                  <div class="number">
+                    <div class="number__wrap">
+                        <p> studio</p>
+                    <span>02</span>
+                    </div>
+                    </p>
+                  </div>
+                  
+                  <div class="dimension">
+                      <div class="ratio">
+                        <p class="ratio__title">dimensions</p>
+                        <p>87ft × 92ft × 31ft<br/> (26.52m × 28.04m × 9.45m)</p>
+                      </div>
+
+                      <div class="detail">
+      
+                        <p>detail</p>
+                        <!-- <div class="mobile">  <img src="/img/pre.svg" alt=""></div>   -->
+
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                          <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                   </div>
+                    
+                  </div>
+                </div>
+            </a>
+          
           </div>
+          <div class="studio__wrap">
+            <a href="">
+                <div class="image"><img src="/img/studio3.jpg" alt="" /></div>
+                <div class="studio__wrap-text">
+                  <div class="number">
+                    <div class="number__wrap">
+                        <p> studio</p>
+                    <span>03</span>
+                    </div>
+                    </p>
+                  </div>
+                  
+                  <div class="dimension">
+                      <div class="ratio">
+                        <p class="ratio__title">dimensions</p>
+                        <p>87ft × 92ft × 31ft<br/> (26.52m × 28.04m × 9.45m)</p>
+                      </div>
+
+                      <div class="detail">
+      
+                        <p>detail</p>
+                        <!-- <div class="mobile">  <img src="/img/pre.svg" alt=""></div>   -->
+
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                          <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                   </div>
+                    
+                  </div>
+                </div>
+            </a>
+          
+          </div>
+          <div class="studio__wrap">
+            <a href="">
+                <div class="image"><img src="/img/studio4.jpg" alt="" /></div>
+                <div class="studio__wrap-text">
+                  <div class="number">
+                    <div class="number__wrap">
+                        <p> studio</p>
+                    <span>04</span>
+                    </div>
+                    </p>
+                  </div>
+                  
+                  <div class="dimension">
+                      <div class="ratio">
+                        <p class="ratio__title">dimensions</p>
+                        <p>87ft × 92ft × 31ft<br/> (26.52m × 28.04m × 9.45m)</p>
+                      </div>
+
+                      <div class="detail">
+      
+                        <p>detail</p>
+                        <!-- <div class="mobile">  <img src="/img/pre.svg" alt=""></div>   -->
+
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                          <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                   </div>
+                    
+                  </div>
+                </div>
+            </a>
+          
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <p>email info@goldenboxstudios.com</p>
+               <p class="tele">Tel <span>+84 979 872 809</span></p>
+          </div>
+
+          <p class="footer__top-right">
+            If you have any questions, comments or<br />
+            suggestions, feel free to email us or send us a message.
+          </p>
+          <p class="footer__top-mobile">
+            andress<br />
+            04 bau cat district tan binh ho chi minh city.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="address">
+            andress<br />
+            04 bau cat district tan binh ho chi minh city.
+          </p>
+
+           <div class="form">
+            <div class="form__left">
+              <label>Your Name</label><br />
+              <input type="text" /><br />
+              <label>Phone</label><br />
+              <input type="text" /><br />
+              <label for="fname">Email</label><br />
+              <input type="text" />
+            </div>
+            <div class="form__right">
+              <label>Subject</label><br />
+              <input type="text" /><br />
+              <label>Message</label><br />
+              <textarea></textarea>
+
+              <div class="send">
+                <a href="#">SEND</a>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>    
-    </main>
-    <!-- <script type="text/javascript" src="dest/jsmain.min.js"></script> -->
-    <script type="text/javascript" src="js/main.js"></script>
+        <div class="footer__final">
+          <img class="backtop" src="/img/arrow.png" alt="" />
+
+          <p>© 2018 GBOX STUDIO. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="./dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="./dest/mainjquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>

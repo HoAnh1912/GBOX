@@ -4,58 +4,45 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
-html,
+html {
+  font-size: 62.5%; // => 10px = 1rem
+}
 body {
   width: 100%;
   max-width: $container-max-width;
   margin: auto;
-  @include text($fz-text, $font-main, $lh-text, $text-cl, none);
-  background: $background-main;
   scroll-behavior: smooth;
+  @include text(
+    var(--body16-fs),
+    ir,
+    var(--body16-lh),
+    $black-cl,
+    none
+  ); // tuỳ chỉnh
+  background: $white-cl;
   position: relative;
-  @include customscroll();
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
   .container-fluid {
     width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: var(--gap);
+    padding-left: var(--gap);
     margin-right: auto;
     margin-left: auto;
     @include xs {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: calc(var(--gap) / 2);
+      padding-left: calc(var(--gap) / 2);
     }
   }
-  .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  .no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .no-gap > .col,
-  .no-gap > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
+  .container {
+    width: 100%;
+    padding-right: calc(var(--gap) / 2);
+    padding-left: calc(var(--gap) / 2);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: $xxs-min) {
@@ -79,23 +66,6 @@ body {
     }
   }
 
-  --pdSection: 60px 0;
-
-  body {
-    width: 100%;
-    margin: auto;
-    @include visible;
-    section {
-      &.pd {
-        padding: var(--pdSection);
-
-        @include xs {
-          --pdSection: 40px 0;
-        }
-      }
-    }
-  }
-
   .mainwrapper {
     width: 100%;
     margin: auto;
@@ -115,11 +85,5 @@ body {
   }
   @include xxs {
     // CSS responsive small mobile
-  }
-
-  @media (max-width: 500px) {
-  }
-
-  @include maxW(500px) {
   }
 }

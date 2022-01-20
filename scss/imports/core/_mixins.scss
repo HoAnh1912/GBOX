@@ -187,6 +187,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
 
 @mixin customscroll($width: 5px, $bgTrack: #000, $bgThumb: #ddd) {
   &::-webkit-scrollbar {
@@ -199,3 +203,56 @@
     background: $bgThumb;
   }
 }
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin header {
+  //   margin: var(--gap-head);
+  font-family: pb;
+  // color: $menu-text-cl;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+@mixin title {
+  font-size: 20px;
+  font-family: pb;
+  // line-height: 30.48px;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+@mixin textdes {
+  font-size: 12px;
+  color: $black-cl;
+  font-family: pr;
+  // line-height: 22px;
+  //   color: $black-cl;
+  letter-spacing: -0.4px;
+}
+@mixin textfooter {
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  line-height: 30.48px;
+  font-family: pr;
+  text-transform: uppercase;
+}
+@mixin welcomtext {
+  font-family: pr;
+  letter-spacing: 3.2px;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+// @mixin fontarial{
+//   font-family:ar;
+//   font-size:11px;
+//   line-height:22px;
+// }

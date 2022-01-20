@@ -1,129 +1,264 @@
-// // css footer
-footer {
-  margin-top: 30px;
-  border-top: 1px solid #231f20;
+// css footer
+.footer {
+  // padding-top: 60px;
+  @include xs {
+    border-top: 1px solid $black-cl;
+    position: relative;
+  }
   .container {
+    // padding-top: 60px;
+
     .footer__top {
+      margin-bottom: 22px;
+      padding-left: 20px;
+      padding-top: 60px;
       display: grid;
-      font-family: "pr";
-      font-size: 12px;
-      text-transform: uppercase;
-      line-height: 20px;
-      grid-template-columns: 1fr 0.5fr 0.5fr;
-      letter-spacing: 1px;
-      margin-bottom: 25px;
-      margin-top: 30px;
-      &.--left {
+      // padding-right: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid $black-cl;
+
+      @include sm {
+        padding-right: 20px;
+      }
+      @include md {
+        padding-right: 20px;
+      }
+      @include xs {
         display: block;
-        .email {
-          padding-bottom: 50px;
-          line-height: 25px;
+        max-width: 214px;
+        margin: auto;
+        border-top: none;
+        padding-top: 60px;
+        padding-left: 0px;
+      }
+      .footer__top-left {
+        max-width: 249px;
+        @include xs {
+          max-width: 100%;
+          text-align: center;
         }
-        .tel {
-          display: flex;
-          :first-child {
-            margin-right: 35px;
-            @include sm {
-              margin-right: 0px;
-            }
+        .tele {
+          margin: 30px auto auto auto;
+          @include xs {
+            margin: auto;
           }
-          @include sm {
-            display: block;
+          span {
+            padding-left: 30px;
           }
+        }
+        p {
+          @include textfooter;
         }
       }
-      &.--right {
-        display: block;
-        line-height: 30px;
-        @include sm {
+      .footer__top-right {
+        @include textfooter;
+        max-width: 255px;
+        @include xs {
           display: none;
         }
       }
-      @include sm {
-        display: block;
-        justify-content: center;
-        text-align: center;
-      }
-    }
-  }
-  .footer__bottom {
-    background-color: $yellow-cl;
-    .container {
-      .--wrap {
-        display: grid;
-        //justify-content: space-between;
-        font-family: "pr";
-        font-size: 12px;
-        line-height: 20px;
-        padding-top: 30px;
-        grid-template-columns: 1fr 0.5fr 0.5fr;
-        letter-spacing: 1px;
-        .address {
-          text-transform: uppercase;
-        }
-        @include sm {
-          .formone,
-          .formtwo {
-            display: none;
-          }
-        }
-        .text-input {
-          margin-bottom: 30px;
-          label {
-            display: block;
-          }
-          input {
-            border: none;
-            background: transparent;
-            border-bottom: 1px solid #000;
-            resize: none;
-            height: 30px;
-            width: 220px;
-            font-family: pr;
-            padding-top: 10px;
-            padding-left: 5px;
-          }
-        }
-        .submit {
-          display: flex;
-          justify-content: flex-end;
-          button {
-            border: none;
-            font-size: 10px;
-            font-family: "pb";
-            background: #231f20;
-            color: white;
-            height: 20px;
-            width: 50px;
-            cursor: pointer;
-            text-transform: uppercase;
-          }
-        }
-        @include sm {
+      .footer__top-mobile {
+        display: none;
+        @include xs {
           display: block;
-          justify-content: center;
+          @include textfooter;
           text-align: center;
         }
       }
     }
-    .btntop {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 70px;
-      .info__arrow {
-        padding-bottom: 20px;
-        cursor: pointer;
-        img {
-          height: 25px;
+  }
+
+  .footer__bottom {
+    background-color: $yellow-cl;
+    // @include xs {
+    //   margin-top: 95px;
+    // }
+    .container {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include xs {
+        display: none;
+      }
+      .address {
+        padding-top: 20px;
+        max-width: 255px;
+        @include textfooter;
+        @include xs {
+          position: absolute;
+          max-width: 100%;
+          margin-top: -114px;
+          left: 22%;
+          text-align: center;
         }
       }
-      p {
-        font-size: 10px;
-        font-family: pr;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      .form {
+        padding-top: 40px;
+        display: grid;
+        padding-right: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        @include xs {
+          display: none;
+        }
+        @include sm {
+          padding-right: 20px;
+        }
+        .form__right {
+          padding-left: 20px;
+          textarea {
+            background-color: $yellow-cl;
+            border: 1px solid;
+          }
+          .send {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 5px;
+            // margin-right: 50px;
+            a {
+              background-color: $black-cl;
+              color: white;
+              text-align: right;
+              font-size: 10px;
+              font-family: pb;
+              padding: 10px 10px;
+            }
+          }
+        }
+        label {
+          font-family: pr;
+          font-size: 12px;
+          //   line-height: 66px;
+        }
+        input {
+          border: none;
+          border-bottom: 1px solid black;
+          background-color: $yellow-cl;
+          width: 220px;
+          margin: 15px 0px;
+          outline: none;
+          @include sm {
+            max-width: 155px;
+          }
+        }
+        textarea {
+          @include sm {
+            max-width: 163px;
+          }
+        }
       }
+    }
+    .footer__final {
+      text-align: center;
+      padding-bottom: 30px;
+      margin-top: 53px;
+      @include xs {
+        padding-top: 50px;
+        // padding-bottom: 147px;
+      }
+      .backtop {
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: pr;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: $black-cl;
+      }
+    }
+  }
+}
+.footer__contact {
+  // @include xs {
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 100%;
+  //   background-color: $yellow-cl;
+  // }
+  .footer__bottom {
+    background-color: $yellow-cl;
+    // @include xs {
+    //   margin-top: 95px;
+    // }
+    .container {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include xs {
+        display: none;
+      }
+      .description {
+        // padding-top: 20px;
+        // max-width: 255px;
+        @include textfooter;
+
+        padding-top: 50px;
+        padding-right: 129px;
+      }
+      // .form {
+      //   padding-top: 40px;
+      //   display: grid;
+      //   grid-template-columns: repeat(2, 1fr);
+      //   @include xs {
+      //     display: none;
+      //   }
+      //   .form__right {
+      //     padding-left: 20px;
+      //     .send {
+      //       display: flex;
+      //       justify-content: flex-end;
+      //       margin-top: 35px;
+      //       margin-right: 50px;
+      //       a {
+      //         background-color: $black-cl;
+      //         color: white;
+      //         text-align: right;
+      //         font-size: 10px;
+      //         font-family: pb;
+      //         padding: 10px 10px;
+      //       }
+      //     }
+      //   }
+      label {
+        font-family: pr;
+        font-size: 12px;
+        //   line-height: 66px;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        background-color: $yellow-cl;
+        width: 220px;
+        margin: 15px 0px;
+        outline: none;
+        @include sm {
+          max-width: 163px;
+        }
+      }
+      textarea {
+        background-color: $yellow-cl;
+        border: 1px solid;
+      }
+    }
+  }
+  .footer__final {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 53px;
+    @include xs {
+      padding-top: 50px;
+      margin-top: 0px;
+      // padding-bottom: 147px;
+    }
+    .backtop {
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: pr;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: $black-cl;
     }
   }
 }

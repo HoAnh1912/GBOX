@@ -1,177 +1,192 @@
 // CSS HOMEPAGE
-.mainwrapper-homepage {
-  .welcom {
+// Ví dụ
+
+// p {
+//   line-height: 22px;
+// }
+.homepage {
+  background-color: #f4f4f4;
+}
+.welcome {
+  p {
+    line-height: 22px;
+  }
+  .container {
+    padding-top: var(--padding);
+    // padding-bottom: var(--padding);
+    // @include flex;
     text-align: center;
-    color: $text-title;
-    &__title {
-      font-family: pr;
-      font-size: 14px;
-      letter-spacing: 3px;
-      line-height: 20px;
+    // border-top: 1px solid $black-line-cl;
+    @include xs {
+      padding-top: none;
+      border-top: none;
     }
-    &__titlemain {
-      margin: 30px 0 30px 0;
-      font-family: pb;
+    .welcome__text {
+      // font-family: pr;
+      // letter-spacing: 3.2px;
+      // font-size: 14px;
+      // line-height: 22px;
+      // margin-top: ̉60px;
+      @include welcomtext;
+      @include xs {
+        // margin-top: 40px;
+        padding-top: 40px;
+      }
+    }
+    .welcome__gbox {
+      @include title;
+      margin: 30px 0px;
+      color: $blue-cl;
+      background-color: $yellow-cl;
       display: inline-table;
-      background: #ffde00;
-      font-size: 20px;
-      letter-spacing: 5px;
-      color: #525355;
     }
-    &__des {
+    .welcome__descrip {
+      @include textdes; //   font-size: 12px;
+      // line-height: 22px;
+      //   color: $black-cl;
+      // letter-spacing: -0.4px;
+      //   font-family: pr;
+      padding: 0 115px;
       span {
         font-weight: bold;
       }
-      font-size: 12px;
-      font-family: pr;
-      padding: 0 68px 0 68px;
-      line-height: 20px;
-      @include sm {
+      @include xs {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      width: 320px;
+      height: 1px;
+      background-color: $black-line-cl;
+      display: inline-block;
+      margin-top: var(--padding);
+      display: block;
+      margin: auto;
+      margin-top: 60px;
+      @include xs {
         display: none;
       }
     }
   }
-  .product {
-    padding: 0 !important;
-    &:before {
-      content: "";
-      width: 320px;
-      height: 1px;
-      display: block;
-      background: $text-title;
-      margin: auto auto;
-      @include sm {
-        display: none;
-      }
-    }
-    &__tag {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      li {
-        font-size: 12px;
-        font-family: pb;
-        cursor: pointer;
-        height: 100%;
-        a {
-          display: block;
-          text-decoration: none;
-          margin: 0 30px;
-          padding: 50px 0 20px 0;
-          color: #898989;
-          &:hover {
-            color: $text-title;
-            transition: $t;
-          }
-        }
-      }
-      @include sm {
-        display: none;
-      }
-    }
-    &__wrap {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 20px;
-      row-gap: 60px;
-      .welcom__product {
-        width: 100%;
-        .img {
-          height: 0px;
-          position: relative;
-          cursor: pointer;
-          padding-bottom: 70%;
-          overflow: hidden;
-          a {
-            height: 0;
-            overflow: hidden;
-            //position: relative;
-            cursor: pointer;
-            padding-bottom: 70%;
-            max-width: 100%;
-            img {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              min-width: 100%;
-              min-height: 100%;
-              object-fit: cover;
-              transform: translate(-50%, -50%) scale(1);
-              transition: all 0.4s ease 0s;
-              &:hover {
-                transform: translate(-50%, -50%) scale(1.08);
-                transition: 0.4s;
-              }
-            }
-          }
-        }
-        .text {
-          // font-family: pb;
-          padding-top: 40px;
-          .title {
-            text-align: center;
-            a {
-              font-family: pb;
-              text-decoration: none;
-              font-size: 15px;
-              color: $text-title;
-              text-align: center;
-            }
-            &:after {
-              content: "";
-              width: 20px;
-              height: 3px;
-              background: $yellow-cl;
-              display: block;
-              margin: 10px auto;
-            }
-          }
-
-          .des {
-            font-family: pb;
-            line-height: 20px;
-            text-align: center;
-            font-size: 12px;
-            span {
-              font-style: italic;
-            }
-          }
-        }
-      }
+}
+.product {
+  .container {
+    .--home {
       @include xs {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-    }
-    &__bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      padding: 70px auto;
-      padding: 70px auto;
-      position: relative;      
-      a {
-        text-decoration: none;
-        font-family: pb;
-        color: $text-title;
-        padding: 70px 0;
-        text-align: center;
-        line-height: 25px;
-        .arrow-down {
-          height: 10px;
-          width: 18px;
+        display: none;
+        .tag {
+          display: none;
         }
-        // &::after {
-        //   content: "";
-        //   width: 320px;
-        //   height: 1px;
-        //   display: block;
-        //   background: $text-title;
-        //   margin: auto auto;
-        // }
+        // background-color: red;
       }
     }
+
+    //       display: flex;
+    //       justify-content: center;
+    //       //   align-items: center;
+    //       padding-top: 50px;
+    //       text-transform: uppercase;
+    //       margin-bottom: 20px;
+    //       @include header;
+    //       .tag {
+    //         margin: 0px 20px;
+    //         color: $gray-light-cl;
+    //         cursor: pointer;
+    //         &:hover {
+    //           color: $black-cl;
+    //           transition: ($t);
+    //         }
+    //       }
+
+    //     .product__wrap {
+    //       @include xs {
+    //         display: block;
+    //       }
+    //       display: grid;
+    //       grid-template-columns: repeat(3, 1fr);
+    //       grid-template-rows: 315px 315px;
+    //       text-align: center;
+    //       column-gap: 20px;
+    //       row-gap: 70px;
+    //       &-item {
+    //         // position: relative;
+    //         // overflow: hidden;
+    //         .img {
+    //           cursor: pointer;
+    //           position: relative;
+    //           padding-bottom: 45%;
+    //           overflow: hidden;
+    //           img {
+    //             width: 100%;
+    //             position: absolute;
+    //             min-width: 100%;
+    //             min-height: 100%;
+    //             object-fit: cover;
+    //             top: 50%;
+    //             left: 50%;
+    //             @include transform(translate(-50%, -50%) scale(1));
+    //             @include transition($t);
+    //             &:hover {
+    //               @include transform(translate(-50%, -50%) scale(1.05));
+    //               @include transition($t);
+    //             }
+    //           }
+    //         }
+
+    //         .text {
+    //           text-align: center;
+    //           padding-top: 40px;
+    //           @include xs {
+    //             padding-bottom: 50px;
+    //           }
+
+    //           .tit {
+    //             &::after {
+    //               content: "";
+    //               width: 10px;
+    //               height: 3px;
+    //               background-color: $yellow-cl;
+    //               display: block;
+    //               margin: 10px auto 0px auto;
+    //               @include xs {
+    //                 margin-top: 20px;
+    //                 margin-bottom: 20px;
+    //               }
+    //             }
+    //             @include header;
+    //             padding-bottom: 5px;
+    //           }
+    //           // h4 {
+
+    //           //   @include xs {
+    //           //     margin-top: 38px;
+    //           //   }
+    //           // }
+    //           p {
+    //             @include textdes;
+    //             span {
+    //               font-style: italic;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //     .product__down {
+    //       padding-top: 80px;
+    //       padding-bottom: 78px;
+    //       // border-bottom: 1px solid $black-cl;
+    //       text-align: center;
+    //       @include xs {
+    //         padding-top: 30px;
+    //         padding-bottom: 40px;
+    //         border-bottom: none;
+    //       }
+    //       p {
+    //         text-transform: uppercase;
+    //         @include header;
+    //         padding-bottom: 20px;
+    //       }
+    //     }
   }
 }
